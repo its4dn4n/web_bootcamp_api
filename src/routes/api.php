@@ -18,8 +18,15 @@ use App\Http\Controllers\Controller;
 /* Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
- */
+  */
 
+//  
 Route::post("/user",[Controller::class,"create"]);
 Route::get("/user/{id}",[Controller::class,"show"]);
 Route::get("/users",[Controller::class,"index"]);
+
+//
+Route::get('/user', function (Request $request) {
+    return "hello adel";
+  });
+  
