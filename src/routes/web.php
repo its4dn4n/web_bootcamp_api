@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,55 +17,62 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
-
-
-Route::get('/web',function(){
-    return "<h1>hello in your app";
-});
-
-// Route::get('/adel', function () {
-//     return '<h1>welcome adel ';
-// });
-
-// Route::get('/malek', function () {
-//     return ' <h2> welcome malek </h2>';
-// })->name("malakRoute");
-
-Route::get('/{name}', function ($name) {
-    return "<h1>hello $name";
-});
-
-Route::get('/{name}/{prenom}', function ($name, $prenom) {
-    return "<h1>hello $name and $prenom  ";
-});
-
-// Route::get('user', function () {
-//     return view('form');
-// });
-
-// Route::post('adel', function (){
-//     return "hello adel";
-// });
-
-// Route::post('tesks', function () {
-//     return '<h3>hello tesks ';
-// })->name('tas');
-
-Route::get('sum/{x}/{y?}', function ($x,$y=0)
-{
-   return '<h3> la somme est :'. $x+$y;
-});
-
-Route::middleware('verifyIp')->group(     /*['prefix'=>'log'],*/ 
-    function(){
-    Route::get('/adel', function () {
-        return '<h1>welcome adel ';
-    });
-
-    Route::get('/malak', function () {
-        return ' <h2> welcome malak </h2>';
-    })->name("malakRoute");
-    
 }); 
 
+/* Route::get('/web',function(){
+    return "<h1>welcome to your app</h1>";
+}); */
+
+/* Route::get('/adel', function () {
+     return '<h1>welcome adel</h1>';
+ }); */
+
+/*  Route::post('adel', function (){
+      return "welcome adel";
+  }); */
+
+/* Route::get('/malek', function () {
+     return '<h2> welcome malek </h2>';
+ });
+ */
+
+/* Route::get('/{name}', function ($name) {
+    return "<h1>hello".$name."</h1>";
+});
+    */ 
+
+/* Route::get('/{name}/{prenom}', function ($name, $prenom) {
+    return "<h1>hello $name and $prenom </h1>";
+}); */
+
+/* Route::get('sum/{x}/{y?}', function ($x,$y=0)
+{
+   return '<h3> la somme est :'. $x+$y.'</h3>';
+});
+ */
+
+/* Route::get('user', function () {
+    return view('form');
+});
+Route::post('tasks', function () {
+    return '<h3>hello tasks</h3>';
+ })->name('task');
+ */
+
+
+/* Route::get('ip', function (Request $request) {
+    return '<h3>your ip address: </h3>'.$request->ip();
+ });
+
+Route::middleware('verifyIp')->group(     //['prefix'=>'log'] ,
+    function(){
+        Route::get('/adelPrivate', function () {
+            return '<h1 style="color:red;"> welcome adel  </h1>';
+    });
+
+    Route::get('/malekPrivate', function () {
+        return '<h1 style="color:red;"> welcome malek </h1>';
+    });
+
+}); 
+ */

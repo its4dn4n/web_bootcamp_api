@@ -2,7 +2,6 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,12 +19,12 @@ use App\Http\Controllers\Controller;
 });
   */
 
-//  
+// Fisrt session
 Route::post("/user",[Controller::class,"create"]);
 Route::get("/user/{id}",[Controller::class,"show"]);
 Route::get("/users",[Controller::class,"index"]);
 
-//
+// Routing session
 Route::get('/user', function (Request $request) {
     return "hello adel";
   });
